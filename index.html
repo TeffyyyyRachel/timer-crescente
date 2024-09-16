@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="midias/imagens/relogio-icone.ico" type="image/x-icon">
+    <title>Timer</title>
+</head>
+<body>
+    <section>
+        <div id="tempo">
+            <div class="tempo" id="horas">00</div>
+            <div class="tempo">:</div>
+            <div class="tempo" id="minutos">00</div>
+            <div class="tempo">:</div>
+            <div class="tempo" id="segundos">00</div>
+        </div>
+        <div id="botoes">
+            <button class="botoes" id="pausar-comecar" onclick="pausarComecar()">Começar</button>
+            <button class="botoes" id="marcar" onclick="marcar()">Marcar</button>
+            <button class="botoes" id="zerar" onclick="zerar()">Zerar</button>
+            <!-- <button class="botoes" id="tela-cheia" onclick="telaCheia()">Tela cheia</button> -->
+        </div>
+    </section>
+    <section id="marcacoes">
+        <p class="marcacoes" id="sem-marcacoes">Sem marcações</p>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
