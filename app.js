@@ -19,6 +19,7 @@ function atualizarTimer(horas,minutos,segundos) {
     horasHTML.innerText = (horas < 10 ? '0' + horas : horas);
     minutosHTML.innerText = (minutos < 10 ? '0' + minutos : minutos);
     segundosHTML.innerText = (segundos < 10 ? '0' + segundos : segundos);
+    document.querySelector('title').innerText = (horas < 10 ? '0' : '') + horas + ':' + (minutos < 10 ? '0' : '') + minutos + ':' + (segundos < 10 ? '0' : '') + segundos;
 }
 
 function comecar() {
