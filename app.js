@@ -103,4 +103,5 @@ function zerar() {
     quantidadeMarcacoes = 0;
     
     botaoPausarComecar.innerText = 'Começar';
+    document.querySelector('title').innerText = 'Timer';
 }
