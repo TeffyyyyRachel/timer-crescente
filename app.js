@@ -90,18 +90,24 @@ function marcar() {
 }
 
 function zerar() {
-    clearInterval(intervalo);
-    tempoCorrendo = false;
+    if (confirm("Deseja zerar o timer?")){    
+        clearInterval(intervalo);
+        tempoCorrendo = false;
 
-    horasInt = 0;
-    minutosInt = 0;
-    segundosInt = 0;
-    atualizarTimer(horasInt,minutosInt,segundosInt);
+        horasInt = 0;
+        minutosInt = 0;
+        segundosInt = 0;
+        atualizarTimer(horasInt,minutosInt,segundosInt);
+        
+        botaoPausarComecar.innerText = 'Começar';
+        document.querySelector('title').innerText = 'Timer';
+    }
+}
 
-    sectionMarcacoes.innerHTML = "<p class='marcacoes' id='sem-marcacoes'>Sem marcações</p>"
-    semMarcacoes = document.getElementById('sem-marcacoes');
-    quantidadeMarcacoes = 0;
-    
-    botaoPausarComecar.innerText = 'Começar';
-    document.querySelector('title').innerText = 'Timer';
+function limparMarcacoes() {
+    if (confirm("Deseja limpar as marcações?")) {    
+        sectionMarcacoes.innerHTML = "<p class='marcacoes' id='sem-marcacoes'>Sem marcações</p>"
+        semMarcacoes = document.getElementById('sem-marcacoes');
+        quantidadeMarcacoes = 0;
+    }
 }
